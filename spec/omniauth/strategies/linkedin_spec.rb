@@ -86,9 +86,10 @@ describe OmniAuth::Strategies::LinkedIn do
     let(:expires_at) { 946688400 }
     let(:token) { 'token' }
     let(:refresh_token) { 'refresh_token' }
+    let(:refresh_token_expires_in) { 525600 }
     let(:access_token) do
       instance_double OAuth2::AccessToken, :expires_in => expires_in,
-        :expires_at => expires_at, :token => token, :refresh_token => refresh_token
+        :expires_at => expires_at, :token => token, :refresh_token => refresh_token, :refresh_token_expires_in => refresh_token_expires_in
     end
 
     before :each do

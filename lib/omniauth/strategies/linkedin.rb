@@ -43,7 +43,8 @@ module OmniAuth
         ::OAuth2::AccessToken.new(client, oauth2_access_token.token, {
           :expires_in => oauth2_access_token.expires_in,
           :expires_at => oauth2_access_token.expires_at,
-          :refresh_token => oauth2_access_token.refresh_token
+          :refresh_token => oauth2_access_token.refresh_token,
+          :refresh_token_expires_in => oauth2_access_token.refresh_token_expires_in
         })
       end
 
